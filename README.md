@@ -17,7 +17,7 @@ Add the `~/.local/bin` folder to your PATH in your `.bashrc` file.
 ## Installation (Automated)
 
 **BACK UP YOUR DOTFILES!!** Any data loss is *not my problem*  
-Run the `install.sh` file.
+Run the `install.sh` file and then add `~/.local/bin` to your PATH.
 Logout and choose the `bspwm` session.
 
 Have Fun!
