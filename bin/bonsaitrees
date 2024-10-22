@@ -1,0 +1,3 @@
+clear
+echo "Starting Tree Relaxation Initiative"
+cbonsai -lim Bonsai -b 2

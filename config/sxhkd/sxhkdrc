@@ -1,0 +1,110 @@
+#
+# wm independent keybinds
+#
+
+# terminal emulator
+super + Return
+	blackbox-terminal
+
+# program launcher
+super + grave
+	rofi -show drun
+
+super + shift + grave
+	$HOME/.local/bin/powermenu_bsp
+
+super + ctrl + grave
+	$HOME/.local/bin/configmenu_bsp
+
+super + semicolon
+	qutebrowser
+
+super + shift + m
+	blackbox-terminal --command "ncmpcpp"
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+printscreen
+	gnome-screenshot
+
+super + ctrl + escape
+	blackbox-terminal --command "bonsaitrees"
+
+# Change Volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+#
+# bspwm keybinds
+#
+
+# Window mode
+super + f
+	bspc node -t floating
+
+super + alt + t
+	bspc node -t tiled
+
+super + alt + p
+	bspc node -t pseudotiled
+
+# Move Windows (Not like the OS)
+super + j
+	bspc node -v -20 0
+
+super + k
+	bspc node -v 0 20
+
+super + i
+	bspc node -v 0 -20
+
+super + l
+	bspc node -v 20 0
+
+# Move Windows (In the tiling layout)
+super + ctrl + i
+	bspc node -s north
+
+super + ctrl + k
+	bspc node -s south
+
+super + ctrl + j
+	bspc node -s west
+
+super + ctrl + l
+	bspc node -s east
+
+# Resize Windows (jkil)
+super + shift + {j,k,i,l}
+		bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+	
+super + alt + {j,k,i,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+super + q
+	bspc node -c
+
+# Reload bspwm
+
+super + shift + Escape
+	bspc wm --restart
+
+# Move windows to workspaces
+
+super + shift + {1-3}
+	bspc node -d ^{1-3}
+
+super + shift + {4-6}
+	bspc node -d ^{4-6}
+
+# Swap workspaces
+super + {1-6}
+	bspc desktop -f ^{1-6}

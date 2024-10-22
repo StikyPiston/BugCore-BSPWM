@@ -1,0 +1,11 @@
+#!/bin/sh
+
+option=$(printf "Bspwmrc\nKeybinds\nPolybar\nQutebrowser" | rofi -dmenu -i)
+
+case "$option" in
+	"Bspwmrc") gnome-terminal -- bash -c "micro ~/.config/bspwm/bspwmrc" ;;
+	"Keybinds") gnome-terminal -- bash -c "micro ~/.config/sxhkd/sxhkdrc" ;;
+	"Polybar") gnome-terminal -- bash -c "cd ~/.config/polybar" ;;
+	"Qutebrowser") gnome-terminal -- bash -c "micro ~/.config/qutebrowser/config.py";;
+	*) exit 1 ;;
+esac
