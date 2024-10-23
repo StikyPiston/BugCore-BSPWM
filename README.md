@@ -14,7 +14,7 @@ These can easily be installed with `apt` or other distro's package managers.
 Copy everything in the `config` folder to `~/.config` and copy the files in `bin` to `~/.local/bin`  
 Add the `~/.local/bin` folder to your PATH in your `.bashrc` file.
 
-## Installation (Automated)
+## Installation (Automated, package install only on Debian/downstream)
 
 **BACK UP YOUR DOTFILES!!** Any data loss is *not my problem*  
 Run the `install.sh` file and then add `~/.local/bin` to your PATH.
