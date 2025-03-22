@@ -1,6 +1,6 @@
-# BspwmDots
+# BugCore-BSPWM
 
-My personal dotfiles for BSPWM, PolyBar, Rofi, Neofetch, and more!
+My previous personal dotfiles for BSPWM, PolyBar, Rofi, Neofetch, and more!
 
 ![BugCore_00](https://github.com/user-attachments/assets/11382500-d4b6-4d0b-9544-d846f6fdea5a)  
 
